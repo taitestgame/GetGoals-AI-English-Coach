@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "models": {
+    "level_classifier": {
+      "type": "RandomForestClassifier",
+      "features": 8,
+      "classes": ["A1", "A2", "B1", "B2", "C1", "C2"],
+      "status": "not_trained"
+    },
+    "roadmap_recommender": {
+      "type": "GradientBoostingClassifier",
+      "status": "not_trained"
+    }
+  },
+  "last_updated": null
+}

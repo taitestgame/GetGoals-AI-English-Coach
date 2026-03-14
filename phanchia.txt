@@ -1,0 +1,328 @@
+Phân chia công việc 
+1. Bằng: Database và AI
+Thành viên 1 chịu trách nhiệm phát triển phần giao diện web của hệ thống, đồng thời đảm nhận phần AI của đề tài. Đây là vị trí kết hợp giữa xây dựng giao diện cho người dùng trên nền tảng web và phát triển chức năng thông minh làm nổi bật tính ứng dụng của hệ thống.
+Công việc cụ thể
+Phát triển giao diện web bằng React
+Xây dựng các màn hình và chức năng trên web như:
+đăng nhập / đăng ký
+trang chủ
+hồ sơ người dùng
+dashboard
+quản trị cơ bản (admin)
+hiển thị kết quả học tập / kết quả xử lý AI
+Thiết kế và xây dựng dashboard/admin
+Hiển thị các kết quả phân tích, dự đoán hoặc gợi ý do AI trả về
+Xử lý phần mô hình AI
+Xây dựng logic gợi ý hoặc thuật toán đề xuất
+Tiền xử lý dữ liệu đầu vào phục vụ AI
+Phối hợp với thành viên phụ trách backend để kết nối AI vào hệ thống
+Kiểm thử phần hiển thị dữ liệu AI trên web
+Vai trò chính
+Chịu trách nhiệm phần giao diện và trải nghiệm của hệ thống trên nền tảng web
+Đảm nhận phần cốt lõi về AI và logic thông minh của đề tài
+
+2. Tài: Phụ trách Backend Lead và Phụ trách Web
+Thành viên 2 giữ vai trò Backend Lead, chịu trách nhiệm chính về phần xử lý phía máy chủ, dữ liệu và kiến trúc tổng thể của hệ thống. Đây là vị trí trung tâm, đảm bảo toàn bộ web, mobile và AI có thể kết nối và vận hành ổn định.
+Công việc cụ thể
+Xây dựng backend bằng FastAPI
+Thiết kế và quản lý cơ sở dữ liệu SQL Server
+Thiết kế kiến trúc tổng thể của hệ thống
+Xây dựng các API phục vụ web và mobile
+Xử lý các chức năng chính như:
+đăng ký / đăng nhập
+xác thực người dùng
+phân quyền
+quản lý hồ sơ người dùng
+quản lý dữ liệu bài học / bài kiểm tra / kết quả
+lưu trữ lịch sử hoạt động
+Xử lý business logic của hệ thống
+Kết nối backend với database
+Tích hợp AI vào backend để cung cấp kết quả cho web và mobile thông qua API
+Hỗ trợ các thành viên khác trong quá trình gọi API và kiểm thử dữ liệu
+Đảm bảo hệ thống backend hoạt động ổn định, bảo mật và đúng luồng xử lý
+Vai trò chính
+Chịu trách nhiệm phần lõi kỹ thuật của dự án
+Đảm bảo luồng dữ liệu, API, xác thực và kết nối hệ thống hoạt động chính xác
+Là người định hướng và chịu trách nhiệm về mặt kiến trúc backend
+
+3. Mỹ: Phụ trách Mobile Flutter Lead và UI/UX Frontend
+Thành viên 3 chịu trách nhiệm phát triển phần ứng dụng mobile bằng Flutter, đồng thời giữ vai trò Frontend Lead để hỗ trợ thống nhất phong cách giao diện giữa web và mobile. Đây là vị trí tập trung vào trải nghiệm người dùng trên thiết bị di động và đảm bảo tính nhất quán trong thiết kế giao diện toàn hệ thống.
+Công việc cụ thể
+Phát triển ứng dụng mobile bằng Flutter
+Xây dựng các màn hình chính trên mobile như:
+splash screen
+onboarding
+đăng nhập / đăng ký
+trang chủ
+danh sách nội dung / chức năng chính
+trang kết quả
+trang hiển thị gợi ý từ AI
+Kết nối ứng dụng mobile với API backend
+Tối ưu giao diện và trải nghiệm trên thiết bị di động
+Đảm bảo ứng dụng có thể chạy ổn định trên cả Android và iOS
+Kiểm thử tương thích giao diện, điều hướng và hiệu năng trên mobile
+Hỗ trợ thống nhất thiết kế frontend toàn hệ thống
+Phối hợp với thành viên 1 để đảm bảo giao diện web và mobile có phong cách đồng bộ
+Đề xuất cải thiện UI/UX để tăng tính thân thiện với người dùng
+Vai trò chính
+Chịu trách nhiệm chính về nền tảng mobile
+Đảm bảo chất lượng giao diện và trải nghiệm người dùng trên ứng dụng di động
+Hỗ trợ thống nhất phong cách thiết kế giữa các nền tảng frontend
+
+
+Sơ đồ tổng thể
+getgoals-ai-english-coach/
+│
+├── backend/                                      [Tài phụ trách chính]
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── core/
+│   │   │   ├── config.py
+│   │   │   ├── database.py
+│   │   │   ├── security.py
+│   │   │   └── dependencies.py
+│   │   │
+│   │   ├── api/
+│   │   │   ├── auth_routes.py
+│   │   │   ├── user_routes.py
+│   │   │   ├── lesson_routes.py
+│   │   │   ├── quiz_routes.py
+│   │   │   ├── result_routes.py
+│   │   │   ├── ai_routes.py
+│   │   │   └── roadmap_routes.py
+│   │   │
+│   │   ├── models/
+│   │   │   ├── user.py
+│   │   │   ├── lesson.py
+│   │   │   ├── quiz.py
+│   │   │   ├── result.py
+│   │   │   ├── study_history.py
+│   │   │   └── roadmap.py
+│   │   │
+│   │   ├── schemas/
+│   │   │   ├── auth_schema.py
+│   │   │   ├── user_schema.py
+│   │   │   ├── lesson_schema.py
+│   │   │   ├── quiz_schema.py
+│   │   │   ├── result_schema.py
+│   │   │   └── ai_schema.py
+│   │   │
+│   │   ├── services/
+│   │   │   ├── auth_service.py
+│   │   │   ├── user_service.py
+│   │   │   ├── lesson_service.py
+│   │   │   ├── quiz_service.py
+│   │   │   ├── result_service.py
+│   │   │   ├── ai_service.py
+│   │   │   └── roadmap_service.py
+│   │   │
+│   │   ├── repositories/
+│   │   │   ├── user_repository.py
+│   │   │   ├── lesson_repository.py
+│   │   │   ├── quiz_repository.py
+│   │   │   ├── result_repository.py
+│   │   │   └── roadmap_repository.py
+│   │   │
+│   │   └── utils/
+│   │       ├── response.py
+│   │       ├── validators.py
+│   │       └── helpers.py
+│   │
+│   ├── requirements.txt
+│   ├── .env
+│   └── README.md
+│
+├── ai-engine/                                    [Bằng phụ trách chính, Tài phối hợp tích hợp]
+│   ├── data/
+│   │   ├── raw/
+│   │   ├── processed/
+│   │   └── sample/
+│   │
+│   ├── notebooks/
+│   │   ├── data_analysis.ipynb
+│   │   └── model_experiment.ipynb
+│   │
+│   ├── models/
+│   │   ├── level_classifier.pkl
+│   │   ├── roadmap_recommender.pkl
+│   │   └── metadata.json
+│   │
+│   ├── src/
+│   │   ├── preprocess.py
+│   │   ├── feature_engineering.py
+│   │   ├── train_model.py
+│   │   ├── predict_level.py
+│   │   ├── recommend_roadmap.py
+│   │   ├── evaluate_model.py
+│   │   └── export_model.py
+│   │
+│   ├── tests/
+│   │   └── test_predict.py
+│   └── README.md
+│
+├── web-frontend/                                 [Tài phụ trách chính, Mỹ hỗ trợ UI/UX]
+│   ├── public/
+│   │   └── index.html
+│   │
+│   ├── src/
+│   │   ├── assets/
+│   │   │   ├── images/
+│   │   │   ├── icons/
+│   │   │   └── illustrations/
+│   │   │
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   │   ├── Button.jsx
+│   │   │   │   ├── Input.jsx
+│   │   │   │   ├── Navbar.jsx
+│   │   │   │   └── Sidebar.jsx
+│   │   │   │
+│   │   │   ├── dashboard/
+│   │   │   │   ├── ProgressCard.jsx
+│   │   │   │   ├── SkillChart.jsx
+│   │   │   │   └── RecommendationPanel.jsx
+│   │   │   │
+│   │   │   ├── admin/
+│   │   │   │   ├── UserTable.jsx
+│   │   │   │   ├── LessonTable.jsx
+│   │   │   │   └── QuizManager.jsx
+│   │   │   │
+│   │   │   └── ai/
+│   │   │       ├── AIResultCard.jsx
+│   │   │       ├── RoadmapCard.jsx
+│   │   │       └── WeakSkillBox.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Profile.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Lessons.jsx
+│   │   │   ├── Quiz.jsx
+│   │   │   ├── Results.jsx
+│   │   │   ├── Roadmap.jsx
+│   │   │   └── Admin.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   ├── authService.js
+│   │   │   ├── lessonService.js
+│   │   │   ├── quizService.js
+│   │   │   ├── resultService.js
+│   │   │   └── aiService.js
+│   │   │
+│   │   ├── hooks/
+│   │   │   └── useAuth.js
+│   │   │
+│   │   ├── context/
+│   │   │   └── AuthContext.jsx
+│   │   │
+│   │   ├── layouts/
+│   │   │   ├── MainLayout.jsx
+│   │   │   └── AdminLayout.jsx
+│   │   │
+│   │   ├── routes/
+│   │   │   └── AppRoutes.jsx
+│   │   │
+│   │   ├── styles/
+│   │   │   ├── global.css
+│   │   │   ├── dashboard.css
+│   │   │   └── admin.css
+│   │   │
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
+│   ├── package.json
+│   └── README.md
+│
+├── mobile-app/                                   [Mỹ phụ trách chính]
+│   ├── lib/
+│   │   ├── main.dart
+│   │   │
+│   │   ├── core/
+│   │   │   ├── constants/
+│   │   │   │   └── app_constants.dart
+│   │   │   ├── theme/
+│   │   │   │   ├── app_theme.dart
+│   │   │   │   └── colors.dart
+│   │   │   └── utils/
+│   │   │       └── helpers.dart
+│   │   │
+│   │   ├── models/
+│   │   │   ├── user_model.dart
+│   │   │   ├── lesson_model.dart
+│   │   │   ├── result_model.dart
+│   │   │   └── roadmap_model.dart
+│   │   │
+│   │   ├── services/
+│   │   │   ├── api_service.dart
+│   │   │   ├── auth_service.dart
+│   │   │   ├── lesson_service.dart
+│   │   │   ├── quiz_service.dart
+│   │   │   ├── result_service.dart
+│   │   │   └── ai_service.dart
+│   │   │
+│   │   ├── screens/
+│   │   │   ├── splash/
+│   │   │   │   └── splash_screen.dart
+│   │   │   ├── onboarding/
+│   │   │   │   └── onboarding_screen.dart
+│   │   │   ├── auth/
+│   │   │   │   ├── login_screen.dart
+│   │   │   │   └── register_screen.dart
+│   │   │   ├── home/
+│   │   │   │   └── home_screen.dart
+│   │   │   ├── lessons/
+│   │   │   │   └── lessons_screen.dart
+│   │   │   ├── quiz/
+│   │   │   │   └── quiz_screen.dart
+│   │   │   ├── results/
+│   │   │   │   └── results_screen.dart
+│   │   │   ├── roadmap/
+│   │   │   │   └── roadmap_screen.dart
+│   │   │   └── profile/
+│   │   │       └── profile_screen.dart
+│   │   │
+│   │   ├── widgets/
+│   │   │   ├── custom_button.dart
+│   │   │   ├── custom_text_field.dart
+│   │   │   ├── progress_card.dart
+│   │   │   └── roadmap_card.dart
+│   │   │
+│   │   └── providers/
+│   │       ├── auth_provider.dart
+│   │       ├── lesson_provider.dart
+│   │       └── roadmap_provider.dart
+│   │
+│   ├── android/
+│   ├── ios/
+│   ├── pubspec.yaml
+│   └── README.md
+│
+├── database/                                     [Bằng phụ trách chính]
+│   ├── schema.sql
+│   ├── seed_data.sql
+│   ├── procedures.sql
+│   ├── views.sql
+│   └── README.md
+│
+├── docs/                                         [Cả nhóm cùng làm]
+│   ├── srs.docx
+│   ├── usecase.png
+│   ├── erd.png
+│   ├── architecture.png
+│   ├── ui-wireframe.png
+│   ├── api-docs.md
+│   ├── test-case.xlsx
+│   └── report-outline.md
+│
+├── tests/                                        [Cả nhóm cùng tham gia]
+│   ├── backend/
+│   ├── web/
+│   ├── mobile/
+│   └── ai/
+│
+├── .gitignore
+├── docker-compose.yml
+└── README.md

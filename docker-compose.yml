@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=mssql+pyodbc://sa:YourPassword123@db/getgoals?driver=ODBC+Driver+17+for+SQL+Server
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/app
+
+  web-frontend:
+    build: ./web-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    volumes:
+      - ./web-frontend:/app
+      - /app/node_modules
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=YourPassword123
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+  ai-engine:
+    build: ./ai-engine
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./ai-engine:/app
+
+volumes:
+  mssql_data:

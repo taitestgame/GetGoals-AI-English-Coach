@@ -1,0 +1,6 @@
+/* Dashboard specific styles */
+.dashboard-page h1 { margin-bottom: 24px; }
+.recommendation-panel { margin-top: 24px; }
+.recommendation-panel ul { list-style: none; padding: 0; }
+.recommendation-panel li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.recommendation-panel li:last-child { border-bottom: none; }
